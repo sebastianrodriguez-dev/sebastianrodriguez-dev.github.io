@@ -1,0 +1,10 @@
+# The repository owner reviews every public support and policy change.
+* @sebastianrodriguez-dev
+
+# Keep release controls and security policy under explicit owner review.
+/.github/workflows/ @sebastianrodriguez-dev
+/SECURITY.md @sebastianrodriguez-dev
+/scripts/ @sebastianrodriguez-dev
+
+# App policy and contact pages must not change without the owner.
+/apps/ @sebastianrodriguez-dev

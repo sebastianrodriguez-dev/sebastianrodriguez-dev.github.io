@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Accessibility features and verified review scope for All Four in Place.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'none'; script-src 'none'; connect-src 'none'; object-src 'none'; frame-src 'none'; media-src 'none'; worker-src 'none'; child-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <title>Accessibility — All Four in Place</title>
+  <link rel="canonical" href="https://sebastianrodriguez-dev.github.io/apps/all-four-in-place/accessibility/">
+  <link rel="stylesheet" href="https://sebastianrodriguez-dev.github.io/assets/site.css">
+</head>
+<body class="all-four">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="site-name"><a href="https://sebastianrodriguez-dev.github.io/apps/all-four-in-place/">All Four in Place</a></p>
+      <nav aria-label="All Four in Place pages">
+        <ul>
+          <li><a href="https://sebastianrodriguez-dev.github.io/apps/all-four-in-place/">Overview</a></li>
+          <li><a href="https://sebastianrodriguez-dev.github.io/apps/all-four-in-place/support/">Support</a></li>
+          <li><a href="https://sebastianrodriguez-dev.github.io/apps/all-four-in-place/privacy/">Privacy</a></li>
+          <li><a href="https://sebastianrodriguez-dev.github.io/apps/all-four-in-place/accessibility/" aria-current="page">Accessibility</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main-inner">
+    <h1>Accessibility</h1>
+    <p class="meta">Last updated August 9, 2026</p>
+    <p class="lede">All Four in Place is designed so the four-item order, clues, feedback, hints, records, settings, and purchase controls remain understandable without relying on decorative art alone.</p>
+
+    <h2>Larger text</h2>
+    <p>The app uses Dynamic Type. At accessibility text sizes, the four-card order changes from a row to a vertical list so item names have room to grow. Automated UI coverage and physical-device checks have exercised the app at maximum Dynamic Type on representative campaign, daily, settings, result, and Full Game screens.</p>
+    <p>If text is clipped or a control is unreachable at your chosen size, include the screen name, text size, iPhone model, and iOS version in a support report.</p>
+
+    <h2>Moving the four cards</h2>
+    <p>Each card exposes its item name and numbered position to iOS accessibility services. You can:</p>
+    <ul>
+      <li>drag a card to a new position;</li>
+      <li>tap one card and then tap another position;</li>
+      <li>use named accessibility actions to move left, move right, or move to position 1, 2, 3, or 4.</li>
+    </ul>
+    <p>The item name remains visible beside its semantic icon. Collection styling does not replace the noun with unrelated art.</p>
+
+    <h2>Appearance and color</h2>
+    <p>The app supports Light and Dark appearance. Text labels, shapes, order numbers, and status wording carry meaning that is not left to color alone. Visual collections change palette and framing while keeping each item's semantic identity.</p>
+    <p>Light and Dark appearance have automated UI coverage and representative physical-device checks. A separate formal contrast sign-off was not recorded, so this statement does not claim the App Store Sufficient Contrast label.</p>
+
+    <h2>Motion, sound, and haptics</h2>
+    <p>Open <strong>Settings</strong> to turn on <strong>Reduce motion</strong>. The app also reads the system Reduce Motion preference and limits card and result movement when either setting calls for it.</p>
+    <p>Sound and haptics can each be turned off in Settings. No puzzle clue or answer depends on sound or haptics.</p>
+
+    <h2>Hints and assistance</h2>
+    <p>Hints are unlimited and present a written reasoning step. Helpful, Classic, and Strict assistance levels change the amount of written feedback after an incorrect check. You can change the level without resetting the current puzzle.</p>
+
+    <h2>VoiceOver and Voice Control review</h2>
+    <p>Controls have programmatic labels, hints, values, headings, and stable actions. Automated tests cover card-reorder actions and representative accessible names.</p>
+    <div class="callout">
+      <p>On August 9, 2026, the owner reviewed the integrated build on a physical iPhone and attested that the VoiceOver and Voice Control common-task gates passed. The owner reported no problems. Exact device, iOS, text-size, reading-order, pronunciation, and action-by-action notes were not separately recorded, so this is an owner attestation rather than an independent accessibility certification.</p>
+    </div>
+
+    <h2>Purchase access</h2>
+    <p>The Full Game screen presents its contents, StoreKit status, purchase action, and Restore Purchases control as labeled elements. The displayed purchase price comes from StoreKit. Purchase, pending, restore, refund, and revocation behavior remain subject to the final live StoreKit and signed-build release checks.</p>
+
+    <h2>Get help</h2>
+    <p>See <a href="https://sebastianrodriguez-dev.github.io/apps/all-four-in-place/support/">All Four in Place support</a> for gameplay, purchase, and contact steps. Read the <a href="https://sebastianrodriguez-dev.github.io/apps/all-four-in-place/privacy/">privacy policy</a> before sending a support message.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Sebastian Rodriguez.</p>
+      <p>Accessibility statement last updated August 9, 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>
