@@ -175,8 +175,13 @@ def scan_page(path: Path, all_ids: dict[Path, set[str]]) -> list[str]:
         errors.append("referrer policy must be no-referrer")
     if parser.canonical_values != [expected_url(path)]:
         errors.append(f"canonical URL must be {expected_url(path)}")
-    if parser.stylesheet_values != [f"{SITE_ORIGIN}/assets/site.css"]:
-        errors.append("page must load only the shared first-party stylesheet")
+    stylesheet = (
+        "apps/all-four-in-place/assets/site.css"
+        if path.is_relative_to("apps/all-four-in-place")
+        else "assets/site.css"
+    )
+    if parser.stylesheet_values != [f"{SITE_ORIGIN}/{stylesheet}"]:
+        errors.append("page must load only its approved first-party stylesheet")
 
     for tag, attribute, url in parser.links:
         if url.startswith("mailto:"):
@@ -250,11 +255,12 @@ def scan_placeholders(allow_placeholders: bool) -> list[str]:
 
 
 def scan_css() -> list[str]:
-    css = (ROOT / "assets/site.css").read_text(encoding="utf-8").lower()
     errors: list[str] = []
-    for forbidden in ("@import", "url(", "expression(", "javascript:"):
-        if forbidden in css:
-            errors.append(f"shared CSS contains forbidden construct {forbidden}")
+    for path in ("assets/site.css", "apps/all-four-in-place/assets/site.css"):
+        css = (ROOT / path).read_text(encoding="utf-8").lower()
+        for forbidden in ("@import", "url(", "expression(", "javascript:"):
+            if forbidden in css:
+                errors.append(f"{path} contains forbidden construct {forbidden}")
     return errors
 
 
